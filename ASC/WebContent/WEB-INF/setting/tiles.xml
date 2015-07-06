@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN" "../dtd/tiles-config_2_1.dtd">
+<tiles-definitions>
+
+		
+	<!-- 로그인 백도어 페이지 -->
+	<definition name="layout" template="/WEB-INF/jsp/layout/commonLayout.jsp">
+		<put-attribute name="title" value="ASC" />
+		<put-attribute name="css" value="/WEB-INF/jsp/common/css_import.jsp" />
+		<put-attribute name="search" value="/WEB-INF/jsp/common/search_navigation.jsp" />
+		<put-attribute name="menu" value="/WEB-INF/jsp/common/menu_navigation.jsp" />
+		<put-attribute name="main" value="" />
+	</definition>
+	
+
+	<!-- 	와일드 카드@	 -->
+	<definition name="main/*" extends="layout">
+		<put-attribute name="main" value="/WEB-INF/jsp/common/{1}.jsp" />
+	</definition>
+
+</tiles-definitions>

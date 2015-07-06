@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans 
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+		http://www.springframework.org/schema/context
+		http://www.springframework.org/schema/context/spring-context-3.0.xsd
+		http://www.springframework.org/schema/tx 
+		http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">
+<!-- Component Bean Scanning Controller Exclude -->
+	<context:component-scan base-package="mil.af.photoms.*">
+		<context:exclude-filter 
+			type="annotation"
+			expression="org.springframework.stereotype.Controller"/>
+	</context:component-scan>
+	
+	<!-- File Upload Setting -->
+<!-- 	<bean id="multipartResolver" -->
+<!-- 		class="org.springframework.web.multipart.commons.CommonsMultipartResolver"> -->
+<!-- 		<property name="maxUploadSize" value="524288000000" /> -->
+<!-- 	</bean> -->
+	
+	<bean class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">
+		<property name="exceptionMappings">
+			<props>
+				<prop key="mil.af.photoms.exception.UserDeniedException">
+<!-- 				<prop key="java.lang.Exception"> -->
+					no_auth
+				</prop>
+<!-- 				<prop key="mil.af.wg19.exception.NeedBrowserUpgradeException"> -->
+<!-- 					error/needBrowserUpgradeException -->
+<!-- 				</prop>		 -->
+			</props>
+		</property>
+	</bean>
+</beans>

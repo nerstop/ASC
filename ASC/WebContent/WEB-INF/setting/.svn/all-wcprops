@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/pms/!svn/ver/92/WebContent/WEB-INF/setting
+END
+photoms-servlet.xml
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/pms/!svn/ver/92/WebContent/WEB-INF/setting/photoms-servlet.xml
+END
+tiles.xml
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/pms/!svn/ver/69/WebContent/WEB-INF/setting/tiles.xml
+END
+photoms-bean.xml
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/pms/!svn/ver/28/WebContent/WEB-INF/setting/photoms-bean.xml
+END

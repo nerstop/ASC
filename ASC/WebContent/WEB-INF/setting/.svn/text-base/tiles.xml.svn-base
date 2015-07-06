@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN" "../dtd/tiles-config_2_1.dtd">
+<tiles-definitions>
+
+		
+	
+	<definition name="layout" template="/WEB-INF/jsp/common/commonLayout.jsp">
+		<put-attribute name="title" value="PhotoMS - 사진 촬영 관리 시스템" />
+		<put-attribute name="import" value="/WEB-INF/jsp/common/common_import.jsp" />
+		<put-attribute name="logo" value="/WEB-INF/jsp/common/common_logo.jsp" />
+		<put-attribute name="top_navigation" value="/WEB-INF/jsp/common/common_top_navigation.jsp" />
+		<put-attribute name="left_navigation" value="/WEB-INF/jsp/common/common_left_navigation.jsp" />
+		<put-attribute name="contents" value="" />
+		<put-attribute name="footer" value="/WEB-INF/jsp/common/common_footer.jsp" />
+	</definition>
+	
+	<definition name="common/*" extends="layout">
+		<put-attribute name="contents" value="/WEB-INF/jsp/common/{1}.jsp" />
+	</definition>
+	
+	<definition name="app/*" extends="layout">
+		<put-attribute name="contents" value="/WEB-INF/jsp/register/application_{1}.jsp" />
+	</definition>
+	
+	<definition name="execute/*" extends="layout">
+		<put-attribute name="contents" value="/WEB-INF/jsp/execute/{1}_execute.jsp" />
+	</definition>
+	<definition name="rcv/*" extends="layout">
+		<put-attribute name="contents" value="/WEB-INF/jsp/receive/application_{1}.jsp" />
+	</definition>
+	
+	<!-- 	로그인 안되있으면 보여지는 페이지 -->
+	<definition name="no_auth" template="/WEB-INF/jsp/common/no_auth.jsp" />
+	
+	<definition name="sucess" template="/WEB-INF/jsp/common/sucess.jsp" />
+	
+	<definition name="error" template="/WEB-INF/jsp/common/fail.jsp" />
+	
+	<!--  -->
+
+	
+
+
+	
+	<definition name="approval" template="/WEB-INF/jsp/register/application_approval.jsp"/>
+
+	
+	<definition name="reg_*" template="/WEB-INF/jsp/execute/{1}_execute.jsp"/>
+
+
+</tiles-definitions>
