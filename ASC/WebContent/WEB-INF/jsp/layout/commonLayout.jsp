@@ -10,14 +10,14 @@
 </head>
 <body>
 
-<div style="width:100%;height:100%;border:1px solid black;float:left;">
-	<div style="width:100%;height:13%;border:1px solid black;float:left;">
+<div style="width:100%;height:100%;float:left;">
+	<div style="width:100%;height:13%;float:left;">
 		<tiles:insertAttribute name="search" />
 	</div>
-	<div style="width:100%;height:13%;border:1px solid black;float:left;">
+	<div style="width:100%;height:13%;float:left;">
 		<tiles:insertAttribute name="menu" />
 	</div>
-	<div style="width:100%;height:74%;border:1px solid black;float:left;">
+	<div style="width:100%;height:74%;float:left;">
 		<tiles:insertAttribute name="main" />
 	</div>
 </div>

@@ -17,5 +17,9 @@
 	<definition name="main/*" extends="layout">
 		<put-attribute name="main" value="/WEB-INF/jsp/common/{1}.jsp" />
 	</definition>
+	
+	<definition name="board/*" extends="layout">
+		<put-attribute name="main" value="/WEB-INF/jsp/board/{1}.jsp" />
+	</definition>
 
 </tiles-definitions>
