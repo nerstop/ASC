@@ -11,6 +11,6 @@
 		useStatementNamespaces="true" 
 	/>
  	<sqlMap resource="/com/asc/config/sql/CommonSql.xml"/>
-<!-- <sqlMap resource="/mil/af/photoms/config/sql/RegisterSql.xml"/> -->
+	<sqlMap resource="/com/asc/config/sql/BoardSql.xml"/>
     
 </sqlMapConfig>

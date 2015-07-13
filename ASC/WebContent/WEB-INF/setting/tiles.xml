@@ -21,5 +21,8 @@
 	<definition name="board/*" extends="layout">
 		<put-attribute name="main" value="/WEB-INF/jsp/board/{1}.jsp" />
 	</definition>
+	
+	<!--    @로그인 단일 페이지    -->
+	<definition name="login" template="/WEB-INF/jsp/common/login.jsp"/>
 
 </tiles-definitions>
